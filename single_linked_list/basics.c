@@ -45,7 +45,7 @@ void print(struct node *ptr)
 	}	
 }
 
-void delete_at_end(struct node *ptr)
+struct node *delete_at_end(struct node *ptr)
 {
 	struct node *p = ptr;
 	while(p->link->link)
@@ -56,21 +56,41 @@ void delete_at_end(struct node *ptr)
 	p->link = NULL;
 	free(temp);
 	temp = NULL;
+	return p;
+}
+
+
+struct node *insert_at_front(struct node *ptr,int data)
+{
+	struct node *temp = malloc(sizeof(struct node));
+	temp->data = data;
+	temp->link = ptr;
+	ptr = temp;
+	return ptr;
+}
+
+
+struct node *delete_at_front(struct node *ptr)
+{
+	struct node *temp = ptr;
+	ptr=ptr->link;
+	free(temp);
+	temp = NULL;
+	return ptr;
 }
 
 int main()
 {
-	int choice;
+	int choice,data;
 	struct node *head = NULL;
 	while(1)
 	{
-		printf("\n1. insert\n2. print\n3. delete\n4. exit\n");
+		printf("\n1. insert_at_end\n2. print\n3. delete_at_end\n4. insert_at_front\n5. delete_at_front\n6. exit\n");
 		scanf("%d",&choice);
 		switch(choice)
 		{
 			case 1:
-				printf("insert\n");
-				int data;
+				printf("insert_at_end\n");
 				scanf("%d",&data);
 				head = insert_at_end(head,data);			
 				break;
@@ -79,10 +99,19 @@ int main()
 				print(head);
 				break;
 			case 3:
-				printf("delete\n");
-				delete_at_end(head);
+				printf("delete_at_end\n");
+				head = delete_at_end(head);
 				break;
 			case 4:
+				printf("insert at front\n");
+				scanf("%d",&data);
+				head = insert_at_front(head,data);	
+				break;
+			case 5:
+				printf("delete at front\n");
+				head = delete_at_front(head);
+				break;	
+			case 6:
 					exit(0);
 			default:
 				printf("invalid\n");	
