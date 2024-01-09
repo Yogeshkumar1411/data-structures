@@ -1,7 +1,23 @@
  /*
 *Name: Yogesh
 *Date: 8/1/24
-*program: Inserting a node at front and end of linked List
+*program: 1. program to insert a node at end
+*2. program to print the nodes
+*3. program to delete the node at end
+*4. program to insert node at front
+*5. program to delete node at front
+*6. Find Length of a Linked List using Loop
+*7. Find Length of a Linked List using Recursion
+*8. Program to insert the node after given node
+*9. Program to delete the node after given node
+*10. Program to Reverse a Linked List using Loop
+*11. Program to Reverse a Linked List using Recursion
+*12. Print a Linked List in Reverse Order using Recursion
+*13. Program to Print Alternate Nodes of Linked List
+*14. Program to Find Nth Node from the End of a Linked List
+*15. C Program to Find Middle Node of a Linked List
+*16. Program to Search an Element in Linked List using Loop
+*17. Program to Search an Element in Linked List using Recursion
 */
 #include<stdio.h>
 #include<stdlib.h>
