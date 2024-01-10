@@ -1,7 +1,7 @@
  /*
 *Name: Yogesh
 *Date: 8/1/24
-*program: Merge Two Sorted Linked List
+*program: union and intersction
 */
 #include<stdio.h>
 #include<stdlib.h>
